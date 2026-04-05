@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BeaglePrep Privacy Policy — Learn how we handle your data." />
+  <title>Privacy Policy — BeaglePrep</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header>
+    <a class="logo" href="/beagleprep/">
+      <span class="logo-icon">🐾</span>
+      <span class="logo-text">BeaglePrep</span>
+    </a>
+    <nav>
+      <a href="/beagleprep/#features">Features</a>
+      <a href="/beagleprep/#download">Download</a>
+      <a href="/beagleprep/privacy/">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <!-- ── Privacy Policy Content ── -->
+  <main class="policy-content">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: April 5, 2026</p>
+
+    <!--
+      DEVELOPER NOTE:
+      Review and update this policy before releasing any new version of BeaglePrep
+      if any of the following have changed:
+        - New third-party SDKs or services added (analytics, crash reporting, advertising, etc.)
+        - Cloud sync provider changed or removed
+        - Payment processor changed
+        - New data collected from users (account info, location, photos, etc.)
+        - Camera or receipt OCR features enabled (Receipt OCR is currently in the Pro tier
+          but not yet implemented — add a section about photo/image handling when it ships)
+        - Household sharing feature enabled (would involve sharing data between users)
+      Update the "Last updated" date above whenever the policy changes.
+    -->
+
+    <p>
+      BeaglePrep ("the App", "we", "us", "our") is a mobile inventory management app built for
+      households, homesteaders, and emergency preparedness enthusiasts. It helps you track
+      supplies — food, water, medical gear, tools, fuel, and more — so you always know what
+      you have and what you need to restock.
+    </p>
+    <p>
+      This Privacy Policy describes what information the App collects, why, how it is stored
+      and protected, and what choices you have as a user. We believe your preparedness data is
+      personal and sensitive, and we have designed BeaglePrep from the ground up to keep it
+      on your device.
+    </p>
+    <p>
+      By using BeaglePrep, you agree to the practices described in this policy. If you do not
+      agree, please discontinue use of the App.
+    </p>
+
+    <h2>1. Information You Enter Into the App</h2>
+    <p>
+      BeaglePrep is a local-first application. Everything you type — item names, quantities,
+      storage locations, expiration dates, categories, restock thresholds, and notes — is
+      written directly to your device's on-board storage (SQLite). This data never leaves your
+      device unless you explicitly opt in to Cloud Sync (see Section 4).
+    </p>
+    <p>
+      We have no servers that passively receive your inventory data. We cannot see your stockpile,
+      your supply levels, or anything else you enter into the App unless you choose to enable sync.
+    </p>
+    <p>
+      The App also stores your preferences locally — default item category, default storage
+      location, display settings, and sort preferences. These are stored on-device and are
+      not transmitted anywhere.
+    </p>
+
+    <h2>2. Information We Do Not Collect</h2>
+    <p>
+      To be explicit about what we are <strong>not</strong> doing:
+    </p>
+    <ul>
+      <li><strong>No account required.</strong> BeaglePrep has no sign-up, no login, and no
+        user profile. We do not collect your name, email address, phone number, or any other
+        personally identifying information.</li>
+      <li><strong>No location tracking.</strong> The App does not request or use your device's
+        GPS or location services.</li>
+      <li><strong>No camera or microphone access.</strong> Camera-based features (such as
+        receipt scanning) are planned for a future Pro release but are not active in the
+        current version. The App does not access your camera or microphone.</li>
+      <li><strong>No advertising or tracking.</strong> We do not use advertising networks,
+        tracking pixels, fingerprinting, or any behavioral profiling technology.</li>
+      <li><strong>No analytics SDKs.</strong> We do not embed third-party analytics tools
+        (such as Firebase Analytics, Mixpanel, or similar) that monitor how you use the App.</li>
+      <li><strong>No contact list or file system access.</strong> The App does not read your
+        contacts, photos, or other files on your device.</li>
+    </ul>
+
+    <h2>3. Push Notifications</h2>
+    <p>
+      BeaglePrep can send push notifications to remind you of expiring items and recurring
+      supply tasks (e.g. "rotate water supply every 6 months"). These reminders are scheduled
+      entirely on your device using
+      <a href="https://expo.dev/privacy" target="_blank" rel="noopener noreferrer">Expo Notifications</a>,
+      a component of the Expo framework used to build the App.
+    </p>
+    <p>
+      Notification content — item names, due dates — is generated from your local inventory
+      data and is never transmitted to our servers. When you complete a recurring reminder,
+      the next occurrence is calculated and scheduled on-device.
+    </p>
+    <p>
+      You can grant or revoke notification permission at any time in your device's system
+      settings (Settings → Apps → BeaglePrep → Notifications). Revoking permission disables
+      future alerts but does not affect your inventory data.
+    </p>
+
+    <h2>4. Optional Cloud Sync (Supabase)</h2>
+    <p>
+      Pro subscribers can enable Cloud Sync to back up their inventory and keep multiple
+      devices in sync. This feature is <strong>disabled by default</strong> and requires you
+      to actively turn it on in the App's Settings screen.
+    </p>
+    <p>
+      When Cloud Sync is enabled, your inventory data is encrypted in transit using TLS and
+      stored on servers operated by
+      <a href="https://supabase.com" target="_blank" rel="noopener noreferrer">Supabase</a>,
+      a third-party database platform. Specifically:
+    </p>
+    <ul>
+      <li>Your inventory items, quantities, locations, and related fields are uploaded to
+        a Supabase database.</li>
+      <li>Your data is associated with a randomly generated device ID — not your name or
+        email. No account is created.</li>
+      <li>Row-level security policies on the database ensure that only requests originating
+        from your device ID can read or modify your data.</li>
+      <li>Supabase does not receive any payment or subscription information.</li>
+    </ul>
+    <p>
+      You can disable Cloud Sync at any time in Settings → Cloud Sync → Disable. This stops
+      all further uploads immediately. To request deletion of data already stored on Supabase
+      servers, see Section 8.
+    </p>
+    <p>
+      Supabase's data handling practices are described in their
+      <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+      Supabase infrastructure is hosted on AWS and is SOC 2 Type II certified.
+    </p>
+
+    <h2>5. In-App Purchases (RevenueCat &amp; Google Play / App Store)</h2>
+    <p>
+      BeaglePrep offers optional paid upgrades: a monthly Pro subscription, an annual Pro
+      subscription, and a one-time Lifetime purchase. All payment transactions are processed
+      directly by <strong>Google Play</strong> (Android) or the <strong>App Store</strong> (iOS).
+      BeaglePrep never handles or stores your payment card number, billing address, or any
+      financial details — those remain entirely within Google's or Apple's payment systems.
+    </p>
+    <p>
+      We use <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat</a>
+      to verify and manage subscription entitlements (i.e., to determine whether your account
+      has an active Pro subscription). RevenueCat receives:
+    </p>
+    <ul>
+      <li>A randomly generated anonymous app user ID</li>
+      <li>Purchase receipt data provided by Google Play or the App Store at the time of purchase</li>
+      <li>The subscription status and expiration date of your entitlement</li>
+    </ul>
+    <p>
+      RevenueCat does not receive your name, email address, or payment card details. Their
+      privacy practices are described in the
+      <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a>.
+    </p>
+
+    <h2>6. App Store Diagnostics</h2>
+    <p>
+      Google Play and Apple may collect anonymous crash reports and performance diagnostics
+      through their standard operating system mechanisms (Android Vitals, Apple CrashKit).
+      This data is collected by the platform, not by us, and is subject to
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>
+      and
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple's Privacy Policy</a>
+      respectively. These reports do not include any of your inventory data.
+    </p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>
+      BeaglePrep is not directed at children under the age of 13 (or the equivalent minimum
+      age in your jurisdiction). We do not knowingly collect personal information from children.
+      If you are a parent or guardian and believe your child has provided personal information
+      through the App, please contact us at
+      <a href="mailto:privacy@thegroovesalad.com">privacy@thegroovesalad.com</a> and we will
+      promptly investigate and delete any such information.
+    </p>
+
+    <h2>8. Data Retention and Deletion</h2>
+    <p>
+      <strong>Local data</strong> remains on your device for as long as you use the App.
+      You can delete all local inventory items at any time via Settings → Data Management →
+      Clear All Items. Uninstalling the App removes all locally stored data from your device.
+    </p>
+    <p>
+      <strong>Cloud Sync data</strong> (if you enabled it) persists in Supabase until you
+      request deletion. To request deletion of your server-side data, email
+      <a href="mailto:privacy@thegroovesalad.com">privacy@thegroovesalad.com</a> with the
+      subject line <strong>"Data Deletion Request"</strong>. We will process your request
+      within 30 days.
+    </p>
+    <p>
+      <strong>Purchase records</strong> held by RevenueCat are retained in accordance with
+      their data retention policy. Contact RevenueCat directly to exercise rights over that data.
+    </p>
+
+    <h2>9. Your Rights</h2>
+    <p>
+      Depending on where you live, you may have certain rights regarding your personal data,
+      including the right to access, correct, or delete information we hold about you, or to
+      object to or restrict its processing. Because BeaglePrep collects minimal personal data
+      and stores most data locally on your device, many of these rights are already exercisable
+      directly within the App.
+    </p>
+    <p>
+      For any data held by third-party services (Supabase, RevenueCat, Google, Apple), please
+      refer to those parties' privacy policies or contact us and we will assist where we can.
+      To exercise any rights or make a privacy-related request, contact us at
+      <a href="mailto:privacy@thegroovesalad.com">privacy@thegroovesalad.com</a>.
+    </p>
+
+    <h2>10. Security</h2>
+    <p>
+      We take reasonable steps to protect your data:
+    </p>
+    <ul>
+      <li>All data transmitted to Supabase (when Cloud Sync is enabled) uses TLS encryption.</li>
+      <li>Database access is restricted by row-level security — your data is only accessible
+        to your device's generated ID.</li>
+      <li>We do not store passwords or payment credentials.</li>
+    </ul>
+    <p>
+      No method of electronic storage or transmission is 100% secure. We recommend protecting
+      your device with a passcode, biometric lock, or full-disk encryption to safeguard the
+      local copy of your inventory.
+    </p>
+
+    <h2>11. Changes to This Policy</h2>
+    <p>
+      We will update this Privacy Policy when we add new features, change third-party services,
+      or as required by law. When we do, we will revise the "Last updated" date at the top of
+      this page. For significant changes, we will make reasonable efforts to notify users
+      (for example, through an in-app notice on the next app update).
+    </p>
+    <p>
+      Continued use of BeaglePrep after a policy update constitutes your acceptance of the
+      revised terms. We encourage you to review this page periodically.
+    </p>
+
+    <h2>12. Contact Us</h2>
+    <p>
+      If you have any questions, concerns, or requests regarding this Privacy Policy or the
+      way BeaglePrep handles your data, please reach out:
+    </p>
+    <p>
+      <strong>The Groove Salad</strong><br />
+      Email: <a href="mailto:privacy@thegroovesalad.com">privacy@thegroovesalad.com</a><br />
+      Website: <a href="https://thegroovesalad.com">thegroovesalad.com</a>
+    </p>
+    <p>
+      We aim to respond to all privacy-related inquiries within 5 business days.
+    </p>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>
+      &copy; <span id="year"></span> The Groove Salad. All rights reserved.
+      &nbsp;|&nbsp;
+      <a href="/beagleprep/">BeaglePrep</a>
+      &nbsp;|&nbsp;
+      <a href="/beagleprep/privacy/">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
