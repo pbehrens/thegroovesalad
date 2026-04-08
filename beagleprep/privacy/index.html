@@ -117,7 +117,7 @@
 
     <h2>4. Optional Cloud Sync (Supabase)</h2>
     <p>
-      Pro subscribers can enable Cloud Sync to back up their inventory and keep multiple
+      Any BeaglePrep user can enable Cloud Sync to back up their inventory and keep multiple
       devices in sync. This feature is <strong>disabled by default</strong> and requires you
       to actively turn it on in the App's Settings screen.
     </p>
@@ -131,10 +131,12 @@
       <li>Your inventory items, quantities, locations, and related fields are uploaded to
         a Supabase database.</li>
       <li>Your data is associated with a randomly generated device ID — not your name or
-        email. No account is created.</li>
+        email. No account is created on any server.</li>
       <li>Row-level security policies on the database ensure that only requests originating
         from your device ID can read or modify your data.</li>
       <li>Supabase does not receive any payment or subscription information.</li>
+      <li>Cloud Sync does not run in the background — data is uploaded only while the App
+        is open and actively in use.</li>
     </ul>
     <p>
       You can disable Cloud Sync at any time in Settings → Cloud Sync → Disable. This stops
@@ -192,15 +194,24 @@
       promptly investigate and delete any such information.
     </p>
 
-    <h2>8. Data Retention and Deletion</h2>
+    <h2 id="data-deletion">8. Data Retention and Deletion</h2>
     <p>
       <strong>Local data</strong> remains on your device for as long as you use the App.
-      You can delete all local inventory items at any time via Settings → Data Management →
-      Clear All Items. Uninstalling the App removes all locally stored data from your device.
+      You can delete all local inventory data at any time:
+    </p>
+    <ol>
+      <li>If Cloud Sync is enabled, go to <strong>Settings → Cloud Sync → Disable</strong> first
+        to stop future uploads and remove your data from the server.</li>
+      <li>Then go to <strong>Settings → Data Management → Clear All Items</strong> to erase all
+        inventory data stored locally on this device.</li>
+    </ol>
+    <p>
+      Uninstalling the App removes all locally stored data from your device automatically.
     </p>
     <p>
-      <strong>Cloud Sync data</strong> (if you enabled it) persists in Supabase until you
-      request deletion. To request deletion of your server-side data, email
+      <strong>Cloud Sync data</strong> (if you enabled it) is removed when you disable Cloud Sync
+      via Settings. If you need additional help or want written confirmation that your data has been
+      deleted from our servers, email
       <a href="mailto:privacy@thegroovesalad.com">privacy@thegroovesalad.com</a> with the
       subject line <strong>"Data Deletion Request"</strong>. We will process your request
       within 30 days.
