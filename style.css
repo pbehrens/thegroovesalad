@@ -55,6 +55,14 @@ header {
   font-size: 1.8rem;
 }
 
+.logo-img {
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: contain;
+  border-radius: 50%;
+  display: block;
+}
+
 .logo-text {
   font-size: 1.4rem;
   font-weight: 700;
@@ -79,6 +87,86 @@ nav a:hover {
   color: var(--white);
   text-align: center;
   padding: 5rem 2rem 4rem;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.hero-text {
+  flex: 1 1 0;
+  max-width: 620px;
+  text-align: left;
+}
+
+.hero-text p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hero-text .hero-actions {
+  justify-content: flex-start;
+}
+
+.hero-text .hero-note {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.hero-logo {
+  flex: 0 0 auto;
+}
+
+.hero-logo img {
+  width: clamp(180px, 28vw, 300px);
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.28);
+}
+
+/* Stack the hero on narrower screens, restoring centered text */
+@media (max-width: 760px) {
+  header {
+    justify-content: center;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.25rem;
+  }
+  nav a {
+    margin-left: 0;
+  }
+  .hero-inner {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .hero-text {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-text .hero-actions {
+    justify-content: center;
+  }
+  .hero-text .hero-note {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .hero-logo img {
+    width: clamp(160px, 50vw, 220px);
+  }
 }
 
 .hero-badge {
