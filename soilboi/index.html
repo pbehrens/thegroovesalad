@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SoilBoi: Worm Tunnel Puzzle — dig tunnels, wire clever traps, then press Start and watch your worms wriggle. A build-then-watch puzzle game coming soon to Google Play." />
+  <title>SoilBoi · Worm Tunnel Puzzle for Android</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header>
+    <a class="logo" href="/soilboi/">
+      <span class="logo-icon">🪱</span>
+      <span class="logo-text">SoilBoi</span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href="/soilboi/privacy/">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <!-- ── Hero ── -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="hero-badge">Android Game</span>
+        <h1>You Dig, They Wriggle</h1>
+        <p>Route hungry worms through the soil to their color-matched burrows. The catch: you only get to dig, not steer. Spend your dig budget on tunnels and forks, wire triggers and pressure plates to the machinery, then press Start and watch the whole plan play out.</p>
+        <div class="hero-actions">
+          <a href="#features" class="btn btn-primary">See Features</a>
+          <a href="#download" class="btn btn-outline">Coming Soon</a>
+        </div>
+        <p class="hero-note">Coming soon to Google Play · No accounts, no timers · Playable fully offline</p>
+      </div>
+      <div class="hero-logo">
+        <img src="screenshots/cap_store_01_title.png" alt="SoilBoi title screen with the worm mascot and Play, Levels, and Daily buttons" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Screenshots ── -->
+  <section id="screenshots">
+    <h2>See SoilBoi in Action</h2>
+    <p class="section-sub">A build-then-watch puzzle: plan it all in the dirt, then press Start and see if you were right.</p>
+    <div class="screenshots-grid">
+
+      <figure class="shot">
+        <img src="screenshots/cap_store_01_title.png" alt="SoilBoi title screen in the cozy storybook-burrow art style" loading="lazy" />
+        <figcaption>Cozy storybook-burrow art, gentle on the eyes</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="screenshots/cap_store_02_build.png" alt="A level mid-build with tunnels dug and the dashed route preview showing where the worms will go" loading="lazy" />
+        <figcaption>Dig tunnels and preview the route before you commit</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="screenshots/cap_store_03_running.png" alt="Worms wriggling through finished tunnels during a simulation run" loading="lazy" />
+        <figcaption>Press Start and watch the plan play out</figcaption>
+      </figure>
+
+      <figure class="shot">
+        <img src="screenshots/cap_store_04_map.png" alt="The underground level map showing chapters of hand-made levels" loading="lazy" />
+        <figcaption>An underground map of 50 hand-made levels</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ── Features ── -->
+  <section id="features">
+    <h2>What's Down There</h2>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="icon">⛏️</div>
+        <h3>Dig, Don't Steer</h3>
+        <p>Spend your dig budget on tunnels and forks, wire triggers and pressure plates to the machinery, then let the worms do the rest. Worms have real body length and absolutely will not stop for each other.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">🎯</div>
+        <h3>Deterministic Simulation</h3>
+        <p>The dashed preview runs the exact same simulation as the real thing, so what you see before Start is what happens after it. When a run goes wrong, fixing the plan is the fun part.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">🗺️</div>
+        <h3>50 Levels + a Daily Puzzle</h3>
+        <p>50 hand-made levels that teach one trick at a time, then combine them all — plus a daily puzzle chosen by your local date. No streaks, no reminders, just today's dirt.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">🔗</div>
+        <h3>Share Codes</h3>
+        <p>Solved a level your way? Copy a short code and send it to a friend, who pastes it and watches your build run. Works offline, no account needed.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Download ── -->
+  <div class="download-section" id="download">
+    <h2>Coming Soon to Google Play</h2>
+    <p>SoilBoi shows an occasional ad between levels — never during play. A one-time $2.99 purchase removes ads permanently, and that is the only thing for sale. Short sessions, no pressure. Just you, the dirt, and some very single-minded worms.</p>
+    <div class="store-buttons">
+      <span class="store-btn">
+        <span class="store-icon">▶</span>
+        Coming soon to Google Play
+      </span>
+      <!-- When the game goes live, swap the span above for:
+      <a href="https://play.google.com/store/apps/details?id=com.thegroovesalad.soilboi" class="store-btn" target="_blank" rel="noopener">
+        <span class="store-icon">▶</span>
+        Get it on Google Play
+      </a>
+      -->
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>
+      &copy; <span id="year"></span> The Groove Salad. All rights reserved.
+      &nbsp;|&nbsp;
+      <a href="/soilboi/">SoilBoi</a>
+      &nbsp;|&nbsp;
+      <a href="/soilboi/privacy/">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
